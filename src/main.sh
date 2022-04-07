@@ -203,7 +203,7 @@ goto checkvm
 : ask
       echo "       Bạn có muốn giữ lại máy ảo không ?"
       echo "y: Giữ trạng thái máy ảo hiện tại và xuất Tệp RDP"
-      echo "n: Delete previous VM then re-create new one"
+      echo "n: Xóa máy ảo hiện tại và tạo một cái mới"
       echo "                    [y/n]"
 while true
 do 
