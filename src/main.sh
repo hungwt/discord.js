@@ -20,7 +20,6 @@ function goto
 }
 
 clear
-echo đang khởi động VMOSKY
 
 goto step1
 : step1
@@ -82,8 +81,8 @@ read -p "|===> " ans
 case $ans in
     1  )  echo "OK"; echo "Standard_DS2_v2" > size ;;
     2  )  echo "OK"; echo "Standard_D2s_v3" > size  ;;
-    ""     )  echo "Không có lựa chọn"; sleep 1; goto step3 ;;
-    *      )  echo "Bạn không thể lựa chọn cái này hãy dùng số đánh dấu ở trên !"; sleep 1 ; goto step3 ;;
+    ""     )  clear;echo "Không có lựa chọn"; sleep 1; goto step3 ;;
+    *      )  clear;echo "Bạn không thể lựa chọn này hãy dùng số đánh dấu ở trên !"; sleep 1 ; goto step3 ;;
 esac
 goto begin
 : begin
@@ -103,6 +102,7 @@ location=$(cat vm)
 echo "az appservice plan create --name myAppServicePlan$NUMBER$NUMBER --resource-group $rs --location $location --sku F1 --is-linux --output none && az webapp create --resource-group $rs --plan myAppServicePlan$NUMBER$NUMBER --name haivm$NUMBER$NUMBER --deployment-container-image-name docker.io/thuonghai2711/v2ray-azure-web:latest --output none" > webapp.sh 
 nohup bash webapp.sh  &>/dev/null &
 
+clear;echo ██╗░░░███╗░█████╗░░██████╗;sleep 0.1;echo ██║░░░██║████╗░████║██╔══██╗██╔════╝;sleep 0.1;echo ╚██╗░██╔╝██╔████╔██║██║░░██║╚█████╗░;sleep 0.1;echo ░╚████╔╝░██║╚██╔╝██║██║░░██║░╚═══██╗;sleep 0.1;echo ░░╚██╔╝░░██║░╚═╝░██║╚█████╔╝██████╔╝;sleep 0.1;echo ░░░╚═╝░░░╚═╝░░░░░╚═╝░╚════╝░╚═════╝░
 goto checkvm
 : checkvm
 echo "⌛  Kiểm tra máy ảo..."
@@ -150,7 +150,7 @@ az vm open-port --resource-group $rs --name Windows-VM-PLUS --port '*' --output 
 
 echo " Xong ! "
 sleep 3
-clear
+clear;echo ██╗░░░███╗░█████╗░░██████╗;sleep 0.1;echo ██║░░░██║████╗░████║██╔══██╗██╔════╝;sleep 0.1;echo ╚██╗░██╔╝██╔████╔██║██║░░██║╚█████╗░;sleep 0.1;echo ░╚████╔╝░██║╚██╔╝██║██║░░██║░╚═══██╗;sleep 0.1;echo ░░╚██╔╝░░██║░╚═╝░██║╚█████╔╝██████╔╝;sleep 0.1;echo ░░░╚═╝░░░╚═╝░░░░░╚═╝░╚════╝░╚═════╝░
 IP=$(az vm show -d -g $rs -n Windows-VM-PLUS --query publicIps -o tsv)
 echo "IP máy ảo: $IP"
 echo "Tên đăng nhập: azureuser"
