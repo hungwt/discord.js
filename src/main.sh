@@ -108,6 +108,7 @@ goto checkvm
 : checkvm
 echo "⌛  Kiểm tra máy ảo..."
 az vm list-ip-addresses -n Windows-VM-PLUS --output tsv > IP.txt 
+echo ""
 [ -s IP.txt ] && bash -c "echo Bạn đã từng chạy một máy ảo trước đó ! && az vm list-ip-addresses -n Windows-VM-PLUS --output table" && goto ask
 
 echo "🖥️  Đang tạo máy ảo"
