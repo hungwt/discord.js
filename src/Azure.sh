@@ -23,11 +23,10 @@ uname -o
 sleep 1
 echo "loại swap"
 sleep 1
-cat /proc/swaps
-sleep 1
 echo " "
 echo "đang tải dữ liệu..."
 sleep 6
+clear
 echo "hmm tên bạn là gì nhỉ ?"
 read -p "|==> " Name
 clear
