@@ -21,7 +21,6 @@ echo "loại hệ thống [✓] "
 sleep 1
 uname -o
 sleep 1
-echo "loại swap"
 sleep 1
 echo " "
 echo "đang tải dữ liệu..."
