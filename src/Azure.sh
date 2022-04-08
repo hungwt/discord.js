@@ -1,3 +1,5 @@
+rm main.sh
+rm Azure.sh
 clear
 echo "Setup BIOS..."
 sleep 1
