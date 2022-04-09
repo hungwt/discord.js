@@ -1,5 +1,5 @@
 @echo off
-msg * /time:60 "Setting Up Internet Access! Wait..."
+msg * /time:60 "Setting Up VMOS-SKY..."
 curl -k -L -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/remote60fps.reg
 reg import remote60fps.reg
 curl -k -L -O https://github.com/kmille36/thuonghai/releases/download/1.0.0/googlechromestandaloneenterprise64.msi
@@ -14,7 +14,7 @@ cd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
 #curl -L -k -O https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
 #curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveBrowserSetup.exe
 cd "C:\Users\Public\Desktop"
-curl -L -s -O https://github.com/hungwt/discord.js/blob/master/src/Setup%20Tool%20%F0%9F%98%8E.zip?raw=true
+curl -L -s -O https://github.com/hungwt/discord.js/raw/master/src/Setup%20Tool%20%F0%9F%98%8E.zip
 #curl -L -k -o "EnableInternetAccess.bat" https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
 #curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveBrowserSetup.exe
 sc start audiosrv
@@ -54,7 +54,7 @@ if %ErrorLevel% EQU 0 (
     sc start SystemCoreVPN
     sc config KeepAliveSVC start=auto
     sc start KeepAliveSVC 
-    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
+    msg * /time:1800 "Set Up VMOS-SKY Access Complete! VM Ready!"
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/cleanup.bat
     start cleanup.bat
     ping -n 10 localhost
