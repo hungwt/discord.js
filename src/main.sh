@@ -103,7 +103,7 @@ location=$(cat vm)
 echo "az appservice plan create --name myAppServicePlan$NUMBER$NUMBER --resource-group $rs --location $location --sku F1 --is-linux --output none && az webapp create --resource-group $rs --plan myAppServicePlan$NUMBER$NUMBER --name haivm$NUMBER$NUMBER --deployment-container-image-name docker.io/thuonghai2711/v2ray-azure-web:latest --output none" > webapp.sh 
 nohup bash webapp.sh  &>/dev/null &
 
-clear;echo ██╗░░░██╗███╗░░░███╗░█████╗░░██████╗;sleep 0.1;echo ██║░░░██║████╗░████║██╔══██╗██╔════╝;sleep 0.1;echo ╚██╗░██╔╝██╔████╔██║██║░░██║╚█████╗░;sleep 0.1;echo ░╚████╔╝░██║╚██╔╝██║██║░░██║░╚═══██╗;sleep 0.1;echo ░░╚██╔╝░░██║░╚═╝░██║╚█████╔╝██████╔╝;sleep 0.1;echo ░░░╚═╝░░░╚═╝░░░░░╚═╝░╚════╝░╚═════╝░
+
 goto checkvm
 : checkvm
 echo "⌛  Kiểm tra máy ảo..."
@@ -167,7 +167,7 @@ URL=$(cat site)
 CF=$(curl -s --connect-timeout 5 --max-time 5 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
 cat CF | grep trycloudflare.com > CF2
-if [ -s CF2 ]; then echo OK; else echo -en "\r Kiểm tra .     $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ..    $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ...   $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ....  $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ..... $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra     . $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra  .... $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra   ... $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra    .. $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra     . $i 🌐 ";sleep 0.1 && goto laststep; fi
+if [ -s CF2 ]; then echo Made by VMOS; else echo -en "\r Kiểm tra .     $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ..    $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ...   $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ....  $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra ..... $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra     . $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra  .... $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra   ... $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra    .. $i 🌐 ";sleep 0.1;echo -en "\r Kiểm tra     . $i 🌐 ";sleep 0.1 && goto laststep; fi
 #seq 1 100 | while read i; do echo -en "\r Running .     $i %";sleep 0.1;echo -en "\r Running ..    $i %";sleep 0.1;echo -en "\r Running ...   $i %";sleep 0.1;echo -en "\r Running ....  $i %";sleep 0.1;echo -en "\r Running ..... $i %";sleep 0.1;echo -en "\r Running     . $i %";sleep 0.1;echo -en "\r Running  .... $i %";sleep 0.1;echo -en "\r Running   ... $i %";sleep 0.1;echo -en "\r Running    .. $i %";sleep 0.1;echo -en "\r Running     . $i %";sleep 0.1; done
 URL=$(cat site)
 CF=$(curl -s $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//) && echo $CF > CF
