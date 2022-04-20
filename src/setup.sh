@@ -28,7 +28,7 @@ curl -skLO https://raw.githubusercontent.com/hungwt/hungwt/main/unlock
 key=$(cat unlock)
 clear;echo ██╗░░░██╗███╗░░░███╗░█████╗░░██████╗;sleep 0.1;echo ██║░░░██║████╗░████║██╔══██╗██╔════╝;sleep 0.1;echo ╚██╗░██╔╝██╔████╔██║██║░░██║╚█████╗░;sleep 0.1;echo ░╚████╔╝░██║╚██╔╝██║██║░░██║░╚═══██╗;sleep 0.1;echo ░░╚██╔╝░░██║░╚═╝░██║╚█████╔╝██████╔╝;sleep 0.1;echo ░░░╚═╝░░░╚═╝░░░░░╚═╝░╚════╝░╚═════╝░
 
-echo Nhập Key vào sever VMOS Ryzen gõ .key để lấy key
+echo "Nhập Key vào sever VMOS Ryzen gõ .key để lấy key"
 read -p "|===> " ans
 case $ans in
     $key  )  echo "Đang mở khóa ..."; rm unlock ;;
