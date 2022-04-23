@@ -32,10 +32,7 @@ read -p "|===> " ans
 case $ans in
     $key  )  echo "Đang mở khóa ..."; rm unlock ;;
     "lol"  )  echo "bruh"; rm unlock; sleep 2 ; goto start ;;
-    "VMOSdeptrai"      )  clear;echo "Vì bạn khen tui nên tui sẽ cho bạn qua lun" ; rm unlock; echo "chờ tí tui đang mở khóa" ; sleep 5 ;;
-    "anhVMOSdeptrai"   )  clear;echo "Vì bạn khen tui nên tui sẽ cho bạn qua lun" ; rm unlock; echo "chờ tí tui đang mở khóa" ;  sleep 5 ;;
-    "vmosdeptrai"      )  clear;echo "Vì bạn khen tui nên tui sẽ cho bạn qua lun" ; rm unlock; echo "chờ tí tui đang mở khóa" ;  sleep 5 ;;
-    "anhvmosdeptrai"   )  clear;echo "Vì bạn khen tui nên tui sẽ cho bạn qua lun" ; rm unlock; echo "chờ tí tui đang mở khóa" ;  sleep 5 ;;
+    "Ryzen login"      )  clear;echo "Xin chào ADMIN!" ; rm unlock; echo "Chúng tôi đang mở khóa cho bạn" ; sleep 4 ;;
     ""     )  echo "Không có lựa chọn"; rm unlock; sleep 2; goto start ;;
     *      )  echo "Lỗi sai key"; rm unlock; sleep 2 ; goto start ;;
 esac
