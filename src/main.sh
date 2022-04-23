@@ -190,7 +190,7 @@ rm -rf site
 NAME=$(cat abc)
 echo "Máy ảo $NAME Đã sẵn xàng hoạt động ! "
 
-sleep 7200
+seq 1 100 | while read i; do echo -en "\r Đang chạy .     $i %";sleep 0.1;echo -en "\r Đang chạy ..    $i %";sleep 0.1;echo -en "\r Đang chạy ...   $i %";sleep 0.1;echo -en "\r Đang chạy ....  $i %";sleep 0.1;echo -en "\r Đang chạy ..... $i %";sleep 0.1;echo -en "\r Đang chạy     . $i %";sleep 0.1;echo -en "\r Đang chạy  .... $i %";sleep 0.1;echo -en "\r Đang chạy   ... $i %";sleep 0.1;echo -en "\r Đang chạy    .. $i %";sleep 0.1;echo -en "\r Đang chạy     . $i %";sleep 0.1; done
 
 : checkwebapp
 rs=$(cat rs)
