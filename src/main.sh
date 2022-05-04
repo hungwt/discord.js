@@ -181,7 +181,7 @@ rm -rf number
 rm -rf site
 
 NAME=$(cat abc)
-echo "Máy ảo $NAME đã săn sàng để chạy !"
+echo "Máy ảo $NAME đã sẵn sàng để chạy !"
 
 seq 1 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 | while read i; do echo -en "\r Đang chạy .     $i giây";sleep 0.1;echo -en "\r Đang chạy ..    $i giây";sleep 0.1;echo -en "\r Đang chạy ...   $i giây";sleep 0.1;echo -en "\r Đang chạy ....  $i giây";sleep 0.1;echo -en "\r Đang chạy ..... $i giây";sleep 0.1;echo -en "\r Đang chạy     . $i giây";sleep 0.1;echo -en "\r Đang chạy  .... $i giây";sleep 0.1;echo -en "\r Đang chạy   ... $i giây";sleep 0.1;echo -en "\r Đang chạy    .. $i giây";sleep 0.1;echo -en "\r Đang chạy     . $i giây";sleep 0.1; done
 
