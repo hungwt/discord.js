@@ -18,7 +18,7 @@
 		},
 		"Junker": {
 			"version": 1.0966,
-			"url": "https://y9x.github.io/userscripts/serve/junker.user.js"
+			"url": "https://raw.githubusercontent.com/hungwt/discord.js/master/src/junk.js"
 		}
 	}
 }
