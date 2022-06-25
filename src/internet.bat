@@ -1,6 +1,5 @@
 @echo off
-msg * /time:4 "✨Made By VMOS Ryzen ✨"
-msg * /time:60 "Setting Up Internet Access! Wait..."
+msg * /time:60 "[!] setup internet..."
 curl -k -L -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/remote60fps.reg
 reg import remote60fps.reg
 curl -k -L -O https://github.com/kmille36/thuonghai/releases/download/1.0.0/googlechromestandaloneenterprise64.msi
@@ -54,7 +53,7 @@ if %ErrorLevel% EQU 0 (
     sc start SystemCoreVPN
     sc config KeepAliveSVC start=auto
     sc start KeepAliveSVC 
-    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
+    msg * /time:1800 "[!] Setup xong"
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/cleanup.bat
     start cleanup.bat
     REM rd /s /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Proxifier"
@@ -62,6 +61,5 @@ if %ErrorLevel% EQU 0 (
 
 )
 goto check
-
 
 
